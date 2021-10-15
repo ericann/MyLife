@@ -10,7 +10,16 @@ global with sharing class ICBCAcPriceSchedule implements Schedulable {
     public final Integer fixedMin = 30;
 
     global void execute(SchedulableContext sc) {
-        getPrice();
+        //周六四点以后到周一早晨八点不读取数据
+        Datetime currentTime = Datetime.now();
+        Date sunday = Date.today().toStartOfWeek();
+        Datetime saturday = Datetime.newInstance(sunday.addDays(-1), Time.newInstance(4, 0, 0, 0));
+        Datetime monday = Datetime.newInstance(sunday.addDays(1), Time.newInstance(8, 0, 0, 0));
+        
+        if(!(currentTime > saturday && currentTime < sunday)) {
+            getPrice();
+        }
+        
         System.abortJob(sc.getTriggerId());
         start();
     }
@@ -48,4 +57,3 @@ global with sharing class ICBCAcPriceSchedule implements Schedulable {
         start();
     }
 }
-
