@@ -1,0 +1,10 @@
+<template>
+	<lightning-card title="工行贵金属" icon-name="custom:custom14">
+		<div class="slds-m-around_medium">
+		<p>Hello, {greeting}!</p>
+		<lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+		</div>
+		<lightning-record-form object-api-name={objectApiName} record-id={recordId} fields={fields}>
+		</lightning-record-form>
+	</lightning-card>
+</template>

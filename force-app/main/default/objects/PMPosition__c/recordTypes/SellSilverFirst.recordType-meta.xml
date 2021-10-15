@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SellSilverFirst</fullName>
+    <active>true</active>
+    <description>先卖出后买入-银</description>
+    <label>SellSilverFirst</label>
+</RecordType>

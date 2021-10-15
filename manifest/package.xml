@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <types>
+        <members>WechatBasicInfor__c</members>
+        <members>PMPrice__c</members>
+        <members>PMTrade__c</members>
+        <!--<members>PMPosition__c</members>-->
+        <name>CustomObject</name>
+    </types>
+
+    <types>
+        <members>HttpService</members>
+        <members>ICBCAcPriceSchedule</members>
+        <members>ICBCService</members>
+        <members>ICBCTimedPushQueueable</members>
+        <members>WechatAccessTokenQueueable</members>
+        <members>WechatAccessTokenSchedule</members>
+        <members>WechatAccessTokenService</members>
+        <members>WechatListener</members>
+        <members>WechatMessageService</members>
+
+        <members>ThresholdCalHandler</members>
+        <members>TriggerManagement</members>
+        <members>TriggerType</members>
+        <members>WechatMessageQueueable</members>
+        <name>ApexClass</name>
+    </types>
+
+    <types>
+        <members>PMPriceTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    
+    <version>52.0</version>
+</Package>
